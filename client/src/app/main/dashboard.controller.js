@@ -5,23 +5,20 @@ angular.module('inspinia')
 
     var vm = this;
 
+    vm.userRequestLoading = true;
     mainService.getUserRequest().then(function(result){
-    	console.log(result);
     	var userRequestConfig = {
 		    chart: {
 		        type: 'column'
 		    },
 		    title: {
-		        text: 'User Requests Analysis'
+		        text: result.data.data.title
 		    },
 		    subtitle: {
 		        text: ''
 		    },
 		    xAxis: {
-		        categories: [
-		            "Leave", 
-		            "Travel"
-		        ],
+		        categories: result.data.data.categories,
 		        crosshair: true
 		    },
 		    yAxis: {
@@ -50,22 +47,18 @@ angular.module('inspinia')
 		            borderWidth: 0
 		        }
 		    },
-		    series: [{
-		        name: 'Total',
-		        data: [65, 59]
-
-		    }, {
-		        name: 'Attended',
-		        data: [28, 48] 
-
-		    }]
+		    series: result.data.data.series
 		};
   		vm.userRequestConfig = userRequestConfig;
+	    vm.userRequestLoading = false;
 
 	});
 
+
+    vm.platformRequestLoading = true;
 	mainService.getPlatformRequest().then(function(result){
-		platformRequestConfig = {
+
+		var platformRequestConfig = {
 	        chart: {
 	            plotBackgroundColor: null,
 	            plotBorderWidth: null,
@@ -73,7 +66,7 @@ angular.module('inspinia')
 	            type: 'pie'
 	        },
 	        title: {
-	            text: 'Platform Specific Request Analysis'
+	            text: result.data.data.title
 	        },
 	        tooltip: {
 	            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -97,46 +90,29 @@ angular.module('inspinia')
 	        series: [{
 	            name: 'Platforms',
 	            colorByPoint: true,
-	            data: [{
-	                name: 'FB Messenger',
-	                y: 56.33
-	            }, {
-	                name: 'Slack',
-	                y: 24.03,
-	                sliced: true,
-	                selected: true
-	            }, {
-	                name: 'Twitter',
-	                y: 10.38
-	            }, {
-	                name: 'Telegram',
-	                y: 4.77
-	            }, {
-	                name: 'Skype',
-	                y: 0.91
-	            }]
+	            data: result.data.data.data
 	        }]
 	    };
   		vm.platformRequestConfig = platformRequestConfig;
+  		vm.platformRequestLoading = false;
 
 	});
 
+
+    vm.alexaRequestLoading = true;
 	mainService.getAlexaRequest().then(function(result){
-	    alexaRequestConfig = {
+	    var alexaRequestConfig = {
 		    chart: {
-		        type: 'column'
+		        type: 'column',
 		    },
 		    title: {
-		        text: 'Alexa Requests Analysis'
+		        text: result.data.data.title
 		    },
 		    subtitle: {
 		        text: ''
 		    },
 		    xAxis: {
-		        categories: [
-		            "Leave", 
-		            "Travel"
-		        ],
+		        categories: result.data.data.categories,
 		        crosshair: true
 		    },
 		    yAxis: {
@@ -165,27 +141,13 @@ angular.module('inspinia')
 		            borderWidth: 0
 		        }
 		    },
-		    series: [{
-		        name: 'Total',
-		        data: [100, 79]
-
-		    }, {
-		        name: 'Attended',
-		        data: [88, 48] 
-
-		    }]
+		    series: result.data.data.data
 		};
   		
   		vm.alexaRequestConfig = alexaRequestConfig;
+  		vm.alexaRequestLoading = false;
+
 
 	});
-
-    
-
-	
-
-
-
-
 
   });
