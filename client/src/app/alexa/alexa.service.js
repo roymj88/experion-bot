@@ -39,8 +39,6 @@ angular.module('inspinia')
      		return deferred.promise;
   		};
 
-
-
 	return {
   		getLeaveRequest: leaveRequestObj,
   		getTravelRequest: travelRequestObj
