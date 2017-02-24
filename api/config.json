@@ -1,0 +1,28 @@
+{
+    "project" : {
+        "name" : "Experion BotDashboard API",
+        "version" : "v0.0.1",
+        "status" : "All APIs are working fine"
+    },
+    "mail" : {
+        "sandgrid": {
+            "apiKey" : "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"
+        }
+    },
+    "mongodb" : {
+        "url" : "mongodb://expbot:experion@ds151909.mlab.com:51909/chatterbot",
+        "host": "",
+        "port" : "",
+        "username" : "",
+        "password" : ""
+    },
+    "email" : {
+        "label": "Experion R&D Team",
+        "mailId" : "bot@experionglobal.com",
+        "admin" : ["mohamed.sahad@experionglobal.com"]
+    },
+    "security" : {
+        "secretKey" : "HelloWorldAZ123",
+        "apiaiAuthKey" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ODZmYmJmNmE1YzYxNDNjY2M5M2YyZjMiLCJ0aW1lIjoxNDgzODcyMDQzMjY1LCJpYXQiOjE0ODM4NzIwNDN9.h32jpwokFdAMUmA5ghQoRIzimwBB6qRrq-ZuHElWIoE123BoTExP"
+    }
+}

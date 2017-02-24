@@ -1,0 +1,203 @@
+
+// Brand Collection 
+// Doc 1
+{
+    "name" : "Samsung",
+    "model" : [{
+        "name" : "S4",
+        "fault" : [{
+            "name" : "Screen Broken",
+            "price" : 3500,
+            "status" : true
+        },{
+            "name" : "IC Problem",
+            "price" : 120,
+            "status" : true
+        }],
+        "status":true
+    },{
+        "name" : "Grand Prime",
+        "fault" : [{
+            "name" : "Battery Problem",
+            "price" : 9500,
+            "status" : false
+        },{
+            "name" : "OS Crashed",
+            "price" : 300,
+            "status" : true
+        }],
+        "status":true
+    }],
+    "status" : true
+}
+
+// Doc 2
+{
+    "name" : "Apple",
+    "model" : [{
+        "name" : "S6 Plus",
+        "fault" : [{
+            "name" : "Screen Broken",
+            "price" : 20000,
+            "status" : false
+        }],
+        "status":true
+    },{
+        "name" : "S5",
+        "fault" : [{
+            "name" : "Battery Problem",
+            "price" : 3540,
+            "status" : false
+        },{
+            "name" : "OS Crashed",
+            "price" : 4500,
+            "status" : true
+        },{
+            "name" : "Broken",
+            "price" : 3500,
+            "status" : true
+        }],
+        "status":false
+    }],
+    "status" : true
+}
+
+////////////////////////////////////////////////////////////////////////////////////////
+
+//User Request Collection
+//Doc 1
+{
+    "login" : {
+        "email" : "test@test.com",
+        "password" : "test@123",
+        "isVerfied" : true,
+        "status" : true
+    },
+    "userInfo" : {
+        "name" : "Sahad",
+        "email" : "test@test.com",
+        "mobile" : "9995605853",
+        "address" : "Test"
+    },
+    "repairList" : [{
+        "requestId" : "",
+        "brand" : "Apple",
+        "model" : "Grand Prime",
+        "fault" : "Battery Problem",
+        "price" : 20000,
+        "requestDate"  : "",
+        "deliveredDate" : "",
+        "userMessage" : "",
+        "repairMessage" : "Will deliver today",
+        "paymentStatus" : "",
+        "repairStatus" : false,
+        "status" : true
+    },{
+        "requestId" : "",
+        "brand" : "Samsung",
+        "model" : "S6 Plus",
+        "fault" : "Screen Broken",
+        "price" : 9500,
+        "requestDate" : "",
+        "deliveredDate" : "",
+        "userMessage" : "",
+        "repairMessage" : "User will not pick up phone",
+        "paymentStatus" : "",
+        "repairStatus" : false,
+        "status" : true
+    }]
+}
+
+
+
+{
+    "brand" : {
+        "brd1" : {
+            "name" : "Samsung",
+            "status" : true
+        },
+        "brd2" : {
+            "name" : "Apple",
+            "status" : true
+        },
+        "brd3" : {
+            "name" : "Nokia",
+            "status" : false
+        },
+        "brd4" : {
+            "name" : "Moto",
+            "status" : true
+        }
+    },
+    "model" : {
+        "mdl1" : {
+            "name" : "S4",
+            "status" : true
+        },
+        "mdl2" : {
+            "name" : "Prime",
+            "status" : true
+        }
+    },
+    "fault" : {
+        "flt1" : {
+            "name" : "Screen Broken",
+            "price" : 456,
+            "status" : true
+        },
+        "flt2" : {
+            "name" : "IC Problem",
+            "price" : 456,
+            "status" : true
+        }
+    },
+    "brandModel" : {
+        "brd1" : {
+            "mdl1" : "S4",
+            "mdl2" : "Prime",
+         }
+    },
+    "modelFault" : {
+        "mdl1" : {
+            "flt1" : {
+                "name" : "Screen Broken",
+                "price" : 3400
+            },
+            "flt1" : {
+                "name" : "Problem",
+                "price" : 400
+            }
+        }
+    },
+    "brandModelFault" : {
+
+    }
+}
+
+
+
+ "model" : [{
+        "name" : "S4",
+        "fault" : [{
+            "name" : "Screen Broken",
+            "price" : 3500,
+            "status" : true
+        },{
+            "name" : "IC Problem",
+            "price" : 120,
+            "status" : true
+        }],
+        "status":true
+    },{
+        "name" : "Grand Prime",
+        "fault" : [{
+            "name" : "Battery Problem",
+            "price" : 9500,
+            "status" : false
+        },{
+            "name" : "OS Crashed",
+            "price" : 300,
+            "status" : true
+        }],
+        "status":true
+    }]

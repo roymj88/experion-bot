@@ -1,0 +1,36 @@
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul side-navigation class="nav metismenu" id="side-menu">
+            <li class="nav-header">
+
+                <div class="profile-element" uib-dropdown>
+                    <a href>
+                            <span class="clear">
+                                <span class="block m-t-xs">
+                                    <strong class="font-bold">{{main.userName}}</strong>
+                             </span>
+                            </span>
+                    </a>
+                    <ul uib-dropdown-menu class="animated flipInX m-t-xs">
+                        <li><a href="">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="logo-element">
+                    Exp Bot
+                </div>
+
+            </li>
+
+            <li ui-sref-active="active">
+                <a ui-sref="index.main"><i class="fa fa-tachometer"></i> <span class="nav-label">Dashboard</span> </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="index.bot"><i class="fa fa-android"></i> <span class="nav-label">BOT</span></a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="index.alexa"><i class="fa fa-amazon"></i> <span class="nav-label">Alexa</span></a>
+            </li>
+        </ul>
+
+    </div>
+</nav>
