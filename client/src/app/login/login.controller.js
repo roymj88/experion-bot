@@ -16,9 +16,12 @@ angular.module('inspinia')
                     "password" : vm.formData.password
                 };
 
+                $rootScope.AuthCode = "";
+                $window.localStorage.setItem('AuthCode', "");
+
                 loginService.login(dataToSend).then(function(result){
                     if(result.data.status === 1){
-                        $window.localStorage.setItem('AuthCode', result.data.data.token)
+                        $window.localStorage.setItem('AuthCode', result.data.data.token);
                         $rootScope.AuthCode = result.data.data.token;
                         $state.go('index.main');
                     }else{
