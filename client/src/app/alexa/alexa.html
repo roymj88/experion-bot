@@ -27,9 +27,9 @@
                                     </thead>
                                     <tbody>
                                         <tr ng-repeat="row in ac.leaveRequestData">
-                                            <td>{{row.name}}</td>
-                                            <td>{{row.leave_type}}</td>
-                                            <td>{{row.request_source}}</td>
+                                            <td class="text-capitalize">{{row.name}}</td>
+                                            <td class="text-capitalize">{{row.leave_type}}</td>
+                                            <td class="text-capitalize">{{row.request_source}}</td>
                                             <td>{{row.start_date | date}}</td>
                                             <td>{{row.end_date | date}}</td>
                                         </tr>
@@ -58,12 +58,12 @@
                                     </thead>
                                     <tbody>
                                         <tr ng-repeat="row in cc.travelRequestData">
-                                            <td>{{row.name}}</td>
-                                            <td>{{row.source}}</td>
-                                            <td>{{row.destination}}</td>
-                                            <td>{{row.travel_options}}</td>
+                                            <td class="text-capitalize">{{row.name}}</td>
+                                            <td class="text-capitalize">{{row.source}}</td>
+                                            <td class="text-capitalize">{{row.destination}}</td>
+                                            <td class="text-capitalize">{{row.travel_options}}</td>
                                             <td>{{row.destination_reach_date | date}}</td>
-                                            <td>{{row.request_source}}</td>
+                                            <td class="text-capitalize">{{row.request_source}}</td>
                                             <td>{{row.request_date | date}}</td>
                                         </tr>
                                     </tbody>
